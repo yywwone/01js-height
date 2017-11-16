@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+  // var a = 25;
+  // function abc() {
+
+  //   // 函数它又是一个作用域  局部作用域
+  //   // 第一步 预解析
+  //   var a;
+  //   // 第二步： 执行
+
+
+
+  //   alert(a); // undefined
+  //   var a = 10;
+  // }
+  // abc();
+
+  // js的执行过程  v8（js解析器）
+  //   第一步：预解析
+  //走一走 看一看  看看当前作用域里面有没有声明的变量和声明的函数
+  // 预解析空间
+  // var a  function abc
+
+
+  //
+
+  //   第二步  执行代码 （从上到下）
+
+
+  // 在全局下面 进行预解析
+
+  // 第一步预解析
+  // function a() 如果预解析的时候名称冲突 函数名优先级变量名高 覆盖变量
+  // // 第二步 执行
+
+
+
+
+  // console.log(a); //  function a
+
+  // function a() {
+  //   console.log('aaaaa');
+  // }
+
+  // var a = 1;
+
+  // console.log(a); // 1 
+
+// 第一步预解析
+
+
+  function a() {
+    alert(3);
+  }
+  function b() {
+    alert(4);
+  }
+// 第二步代码执行
+
+
+//==============
+
+  alert(a); // function a (){alert(3)}
+  var a;
+  alert(a); //function a (){alert(3)}
+  function a() {
+    alert(1);
+  }
+  alert(a); // function a(){alert(3)}
+  var a = 2;
+  alert(a); // 2 
+  function a() {
+    alert(3);
+  }
+  alert(a);//2 
+  function b() {
+    alert(4);
+  }
+  alert(a); //2
+
+</script>
+
+</html>

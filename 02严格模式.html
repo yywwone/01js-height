@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script>
+// 如何让js开启严格模式
+    // "use strict";
+
+    
+    // a = 15;
+    // alert(a);// 严格模式下 不允许出现隐式声明全局变量
+
+
+    function fn() {
+
+      console.log(this);// 在严格模式下 函数内部this 在函数直接调用的时候，指向undefined
+
+    }
+    fn();
+
+    function fn() {
+
+      alert(a);// 报错
+      a  = 15;
+      
+    }
+    fn();
+    alert(a);
+    
+  </script>
+</head>
+<body>
+  
+</body>
+</html>

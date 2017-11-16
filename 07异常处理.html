@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  
+
+
+  <script>
+
+    try{ // 尝试运行
+
+     console.log(12); // ReferenceError: a is not defined
+
+      var data = false;
+      if(!data) {
+
+        //我们可以在try语句中手动抛出一个错误
+        throw new Error('错了，数据异常，请联系管理员！')
+
+      }
+    }catch(aaa){
+      // 如果try中的语句出现了错误
+      //那么就会进入catch中 执行catch 中语句
+       console.log(aaa);// 我们可以知道这个错误是什么
+       
+    }finally{
+
+      var num1 = 10;
+      var num2 = 20;
+      console.log(num1+num2);
+    }
+   
+
+
+   
+  </script>
+
+</body>
+</html>

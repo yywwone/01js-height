@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script>
+   
+    var arr = [];
+    var arr = new Array(); // 系统里面定义好的数组的构造函数
+
+
+    var obj = {}
+
+    var obj = new Object();// 系统里面定义好的对象的构造函数
+
+    var mydate = new Date(); // 系统里面定义好的日期对象的构造函数
+
+    var re = new RegExp();// 系统提供好的正则对象 匹配字符串
+
+    // js中内置很多对象  Object Array   Date RegExp  Error内置对象 
+    //   包装对象  Number   String  Boolean
+    //   特殊的有一个内置对象 Math 数学对象 （单体内置对象  独立存在的 不是由构造函数构造出来）
+
+ // 创建对象的第一种方式  简单的方式 字面量声明方式
+      var obj = {
+        name : "zs",
+        age :25
+      }
+      // 第二种方式 构造函数声明方式 标准声明方式
+
+      var obj = new Object();
+      obj.name = "lisi";
+      obj.age = 12;
+
+      // 我如何去创建多个对象 提出来第三种创建对象的方式  
+      // 工厂方式（用函数批量创建对象）
+      // 工厂 ：
+      // 第一步： 准备原料
+      // 第二步 加工
+      // 第三步  出厂
+    //   function createStudent(name,score) {
+    //     // 准备好原料  一个空白对象
+    //     var student = {};
+    //     // 加工  相当于给对象添加属性和方法
+    //     student.name = name,
+    //     student.score = score;
+    //     student.printScore = function() {
+    //       console.log(this.name+ "的分数为"+this.score);
+    //     }
+    //     return student;
+    //   }
+    //   var s1 = createStudent("Michael",98);
+    //   s1.printScore();
+
+    //  var s2 =  createStudent("Bob",81);
+    //  s2.printScore();
+
+// 相办法改成更优雅的构造函数的写法
+    //  function CreateStudent(name,score) {
+    //     // 准备好原料  一个空白对象
+    //     // var student = {};
+    //     // 加工  相当于给对象添加属性和方法
+    //     this.name = name;// this隐式对象 月饼的模子
+    //     this.score = score;
+    //     this.printScore = function() {
+    //       console.log(this.name+ "的分数为"+this.score);
+    //     } // 学习面向对象写法 该如何结合实际案例
+    //     // return this;
+    //   }
+
+    //   // var arr = new Array();
+    //   // var obj = new Object();
+    //  // fn(); 直接调用 this指向window
+    //  // obj.fn();this指向obj
+    //   //oBox.onclick = function(){this} this指向触发该事件前面的那个元素对象
+
+
+    //   var s1 = new CreateStudent("Michael",98);// 构造函数有一个不成文规定 名称首字母大写
+    //   var s2 = new CreateStudent("Bob",81);
+
+    //   s1.printScore();
+    //   s2.printScore();
+//=============================
+    
+ </script>
+</head>
+<body>
+  
+</body>
+</html>

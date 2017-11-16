@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script>
+    var obj = {
+      "name": "尼古拉斯赵四",
+      "age": 35,
+      "job": "actor"
+    }
+
+    // 属性访问方式 两种
+    // 第一种： .语法  
+    var aa = "name";
+    console.log(obj.aa); // undefined
+
+    // 第二种 关联数组的方式 []
+    console.log(obj[aa])
+
+    // 区别：
+      // 如果属性用变量来代替  
+      // 则.后面不能直接跟变量
+      // 而中括号可以
+
+
+      delete obj.name;
+      console.log(obj);
+  </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

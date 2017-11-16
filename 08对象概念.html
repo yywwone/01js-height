@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script>
+    //无序属性的集合，其属性可以包含基本值、对象或者函数。
+    var person = {
+      name: "小沈阳",
+      age: 38,
+      job: "singer"
+    }
+
+    for (var attr in person) {
+      console.log(person[attr]);
+    }
+
+    //var arr  = ["hello","hi","你好","撒浪嘿呦","靠你其哇"];
+    // 数组属于特殊的对象 数组的键名其实就是它的索引值
+    var arr = {
+      0: "hello",
+      1: "hi",
+      2: "你好",
+      "length": 3
+    }
+
+    for (var i = 0; i < arr.length; i++) {
+      console.log(arr[i]);
+    }
+    // for(var attr in arr) {
+    //   console.log(arr[attr]);
+    // }
+
+    // 用对象描述一个女朋友
+
+    var girlFriend = {
+      name: "静静",
+      age: 18,
+      height: "1.65m",
+      weight: "45kg",
+      look: "beautiful",
+      cook: function () {
+        console.log("正在做饭……")
+      },
+      drive: function () {
+        console.log("正在开车……")
+      },
+      coding: function () {
+        console.log("正在debug");
+      }
+    }
+
+    // 面向对象： 其实是面向过程的高度封装，相比过程式的写法，根据灵活 可复用性强，
+    // 低耦合（代码之间较少的粘连） 有利于后期代码的开发和维护
+
+    // 面向对象的特点：三大特点：
+      // 继承性
+      // 封装性
+      // 多态性
+  </script>
+</head>
+
+<body>
+
+</body>
+<script>
+    // var std1 = { name: 'Michael', score: 98 }
+    // var std2 = { name: 'Bob', score: 81 }
+    // // 打印每一个学生的成绩 你总是以功能实现为出发点
+    // printScore(std1)
+    // printScore(std2)
+    // function printScore(s) {
+    //   console.log(s.name+ "的分数为"+s.score);
+    // }
+
+
+    // 以学生为一个对象为出发点  name和scroe 属于学生身上的属性
+    //打印成绩这个事 交个学生对象 让它自己有这个方法 自己把自己的成绩打印出来
+    
+    // var student = {};
+
+    // student.name = "Michael",
+    // student.score = 98;
+    // student.printScore = function() {
+    //   console.log(this.name+ "的分数为"+this.score);
+    // }
+
+    // student.printScore();
+
+
+    var s1 = createStudent("Michael",98)
+    var s2 = createStudent("Bob",81)
+    console.log(s1.name);
+    s2.printScore();
+    
+
+    // 工厂方式
+    function createStudent(name,score) {
+
+      var s = {};
+
+      s.name = name,
+      s.score = score;
+      s.printScore = function() {
+        console.log(this.name+ "的分数为"+this.score);
+      }
+
+      return s;
+
+    }
+</script>
+
+</html>
